@@ -27,28 +27,28 @@ class TestBus(unittest.TestCase):
 
     # @unittest.skip("Delete this line to run the test")
     def test_can_pick_up_passenger(self):
-        person = Person("Guido van Rossum", 64)
+        person = Person("Guido van Rossum", 64, "Waverly Station")
         self.bus.pick_up(person)
         self.assertEqual(1, self.bus.passenger_count())
 
     # @unittest.skip("Delete this line to run the test")
     def test_can_drop_off_passenger(self):
-        person = Person("Guido van Rossum", 64)
+        person = Person("Guido van Rossum", 64, "Waverly Station")
         self.bus.pick_up(person)
         self.bus.drop_off(person)
         self.assertEqual(0, self.bus.passenger_count())
 
     # @unittest.skip("Delete this line to run the test")
     def test_can_empty_bus(self):
-        person = Person("Guido van Rossum", 64)
+        person = Person("Guido van Rossum", 64, "Waverly Station")
         self.bus.pick_up(person)
         self.bus.empty()
         self.assertEqual(0, self.bus.passenger_count())
 
     # @unittest.skip("Delete this line to run the test")
     def test_can_pick_up_passenger_from_bus_stop(self):
-        person_1 = Person("Guido van Rossum", 64)
-        person_2 = Person("Carol Willing", 50)
+        person_1 = Person("Guido van Rossum", 64, "Waverly Station")
+        person_2 = Person("Carol Willing", 50, "Slateford")
         bus_stop = BusStop("Waverly Station")
         bus_stop.add_to_queue(person_1)
         bus_stop.add_to_queue(person_2)
