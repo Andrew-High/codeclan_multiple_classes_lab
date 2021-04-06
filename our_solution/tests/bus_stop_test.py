@@ -11,7 +11,7 @@ class TestBusStop(unittest.TestCase):
     def test_bus_stop_has_name(self):
         self.assertEqual("Waverly Station", self.bus_stop.name)
 
-    @unittest.skip("Delete this line to run the test")
+    # @unittest.skip("Delete this line to run the test")
     def test_queue_starts_empty(self):
         self.assertEqual(0, self.bus_stop.queue_length())
 
